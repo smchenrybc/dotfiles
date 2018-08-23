@@ -140,12 +140,16 @@ alias zshrel='source ~/.zprofile'
 # CONFIG #
 ##########
 
+## Colors ##
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 ## Zsh ##
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Change folders without `cd`
-# (in bash: `shopt -s autocd`)
+# Change folders without 'cd'
+# (in bash: 'shopt -s autocd')
 setopt auto_cd
 
 #########

@@ -1,10 +1,14 @@
+#!/usr/local/bin/zsh
+
 ############
 # PROFILES #
 ############
+# shellcheck source=/Users/sean/.profile
 if [ -f ~/.profile ]; then
   source ~/.profile
 fi
 
+# shellcheck source=/Users/sean/.profile
 if [ -f ~/.zshrc ]; then
   source ~/.zshrc
 fi
@@ -141,10 +145,12 @@ alias zshrel='source ~/.zprofile'
 ##########
 
 ## Colors ##
+unset LSCOLORS
 export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
+export CLICOLOR_FORCE=1
 
 ## Zsh ##
+# shellcheck disable=SC1091
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -156,16 +162,14 @@ setopt auto_cd
 # PATHS #
 #########
 
-## PHP ##
-# PHPV=`command ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-# export PATH=/Applications/MAMP/bin/php/${PHPV}/bin:$PATH
-
 # Other paths
 export PATH="/usr/local/opt/php@7.1/bin:$PATH"
 export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
-
-## OTHER ##
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/flutter/bin:$PATH
 export PATH=/Users/sean/.composer/vendor/bin:$PATH
+
+## PHP ##
+# PHPV=`command ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
+# export PATH=/Applications/MAMP/bin/php/${PHPV}/bin:$PATH

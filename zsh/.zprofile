@@ -17,7 +17,7 @@ fi
 # ALIASES #
 ###########
 
-## Brew ##
+## Brew
 alias bci='brew cask install'
 alias bcr='brew cask reinstall'
 alias bcu='brew cask uninstall'
@@ -26,14 +26,14 @@ alias bs='brew search'
 alias bu='brew uninstall'
 alias bup='brew update'
 
-## Composer ##
+## Composer
 alias ccp='composer create-project'
 alias cgr='composer global require'
 alias ci='composer install'
 alias cng='composer install && npm install && grunt dev'
 alias cu='composer update'
 
-## Finder ##
+## Finder
 # open a file or folder in Finder
 alias fopen='open -a "Finder"'
 # hide and unhide hidden files
@@ -44,7 +44,7 @@ alias killfinder='sudo killall -KILL Finder'
 # delete .DS_Store files
 alias delds='find . -name ".DS_Store" -type f -delete'
 
-## FIXES ##
+## FIXES
 # fix for slow "open with" menu
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed -r -f -v -domain local -domain user -domain system'
 # refresh thumbs (especially in music folders)
@@ -52,11 +52,11 @@ alias fixthumbs='qlmanage -r cache && killall Finder'
 # fix NPM sass in package folder
 alias fixsass='npm rebuild node-sass --force'
 
-## Flutter ##
+## Flutter
 alias fup='flutter upgrade'
 alias fdoc='flutter doctor'
 
-## Git ##
+## Git
 alias gp='git push'
 alias gpf='git push -f'
 alias gpa='git push --all -u'
@@ -84,59 +84,63 @@ alias gsp='git stash pop'
 addthenpush() { git remote add origin "$1"; git push --all -u; }
 alias grap='addthenpush '
 
-## Grunt ##
+## Grunt
 alias gw='grunt watch'
 alias gd='grunt dev'
 alias gb='grunt build'
 
-## Hyper ##
+## Hyper
 alias hyperconf='mate -w ~/.hyper.js'
 
-## Miscellaneous ##
+## Miscellaneous
 # turn off boot chime
 alias scoff='sudo nvram SystemAudioVolume=%01'
 
-## MP3s ##
+## MP3s
 alias mp3='mp3gain && mp3val'
 alias mp3gain='find . -type f -iname "*.mp3" -print0 | xargs -0 mp3gain -c -p -r -d 6.0'
 alias mp3val='find . -type f -iname "*.mp3" -print0 | xargs -0 mp3val -f -nb -t'
 
-## NPM ##
+## NPM
 alias ni='npm install'
 alias nrd='npm run dev'
 alias nrp='npm run prod'
 alias nrw='npm run watch'
 alias nrs='npm run start'
 
-## PHP ##
+## PHP
 alias phpmamp='/Applications/MAMP/bin/php/php7.1.12/bin/php'
 
-## Preview ##
+## Preview
 alias prev='open -a "Preview"'
 
-## SSH ##
+## SRM
+alias srm='rm -Pv'
+alias srmf='rm -Pvrf'
+
+## SSH
 alias dolocal='ssh -N -L 5555:127.0.0.1:3306 root@104.236.218.62 -vv'
 alias shuttle="sshuttle -r root@104.236.218.62 -N -e 'ssh -L 5555:127.0.0.1:3306'"
 alias dossh='ssh root@104.236.218.62'
 alias ssh-gen='ssh-keygen -t rsa -b 4096 -C'
 alias ssh-del='ssh-add -D'
 
-## Sublime Text ##
+## Sublime Text
 alias st3='subl -n -w'
 
-## TextMate ##
+## TextMate
 alias mate='mate -w'
 
-## Vagrant ##
+## Vagrant
 alias vba='vagrant box add'
 alias vht='vagrant halt'
 alias vup='vagrant up'
 
-## WP-CLI ##
+## WP-CLI
 alias wcd='wp core download'
 alias wta='wp theme activate'
 
-## Zsh profile ##
+## Zsh profile
 alias zshconf='mate -w ~/.zprofile'
 alias zshrel='source ~/.zprofile'
 
@@ -144,12 +148,12 @@ alias zshrel='source ~/.zprofile'
 # CONFIG #
 ##########
 
-## Colors ##
+## Colors
 unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
-## Zsh ##
+## Zsh
 # shellcheck disable=SC1091
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -170,6 +174,6 @@ export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/flutter/bin:$PATH
 export PATH=/Users/sean/.composer/vendor/bin:$PATH
 
-## PHP ##
+## PHP
 # PHPV=`command ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
 # export PATH=/Applications/MAMP/bin/php/${PHPV}/bin:$PATH

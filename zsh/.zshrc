@@ -116,6 +116,12 @@ alias ci='composer install'
 alias cng='composer install && npm install && grunt dev'
 alias cu='composer update'
 
+## DNS
+# High Sierra:
+alias flushdns='sudo killall -HUP mDNSResponder;say cache flushed'
+# Mavericks:
+# alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed'
+
 ## Finder
 # open a file or folder in Finder
 alias fopen='open -a "Finder"'

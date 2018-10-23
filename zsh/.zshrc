@@ -111,6 +111,7 @@ alias bup='brew update'
 
 ## Composer
 alias ccp='composer create-project'
+alias cda='composer dump-autoload'
 alias cgr='composer global require'
 alias ci='composer install'
 alias cng='composer install && npm install && grunt dev'
@@ -121,6 +122,9 @@ alias cu='composer update'
 alias flushdns='sudo killall -HUP mDNSResponder;say cache flushed'
 # Mavericks:
 # alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed'
+
+## Exercism
+alias exr='exercism'
 
 ## Finder
 # open a file or folder in Finder
@@ -239,9 +243,9 @@ alias zshrel='source ~/.zshrc'
 ##########
 
 ## Colors
-unset LSCOLORS
-export CLICOLOR=1
-export CLICOLOR_FORCE=1
+# unset LSCOLORS
+# export CLICOLOR=1
+# export CLICOLOR_FORCE=1
 
 ## Zsh
 # shellcheck disable=SC1091
